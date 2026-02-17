@@ -27,7 +27,7 @@ const tabs: Tab[] = [
   {
     id: 0,
     title: "Advanced Dashboard",
-    image: "/images/image__1.png",
+    image: "/images/firstimage.png",
     subtitle: "Advanced insights at your fingertips",
     description:
       "Instant overview of sales, appointments, clients, and staff activity — all in one place.",
@@ -286,10 +286,9 @@ export default function SalonManagementSection() {
                     onClick={() => handleTabClick(index)}
                     className={`w-full whitespace-nowrap px-6 py-4 rounded-[12px] text-[14px] md:text-[16px] font-semibold transition-all
                        duration-300 shadow-[0_24px_24px_-12px_rgba(0,0,0,0.05)] cursor-pointer font-manrope
-                      ${
-                        active === index
-                          ? "bg-[#635BFF] text-white shadow-md"
-                          : "bg-white text-gray-600 hover:border-indigo-300 hover:bg-gray-50"
+                      ${active === index
+                        ? "bg-[#635BFF] text-white shadow-md"
+                        : "bg-white text-gray-600 hover:border-indigo-300 hover:bg-gray-50"
                       }`}
                   >
                     {tab.title}
