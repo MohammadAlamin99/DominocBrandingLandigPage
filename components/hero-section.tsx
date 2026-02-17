@@ -75,7 +75,7 @@ export default function HeroSection() {
           {/* Image */}
           <div className="relative">
             <Image
-              src="/images/dashboard.png"
+              src="/images/banner-dashboard.png"
               alt="Salon Management Dashboard"
               width={1200}
               height={750}
