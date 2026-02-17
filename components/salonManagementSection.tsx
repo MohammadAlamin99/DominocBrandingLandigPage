@@ -229,9 +229,9 @@ export default function SalonManagementSection() {
     else swiperRef.current.slideNext();
   };
 
+  // ✅ Updated: swiper slideTo remove করা হয়েছে
   const handleTabClick = (index: number) => {
     setActive(index);
-    swiperRef.current?.slideTo(index, 500);
   };
 
   const activeTab = tabs[active];
@@ -286,9 +286,10 @@ export default function SalonManagementSection() {
                     onClick={() => handleTabClick(index)}
                     className={`w-full whitespace-nowrap px-6 py-4 rounded-[12px] text-[14px] md:text-[16px] font-semibold transition-all
                        duration-300 shadow-[0_24px_24px_-12px_rgba(0,0,0,0.05)] cursor-pointer font-manrope
-                      ${active === index
-                        ? "bg-[#635BFF] text-white shadow-md"
-                        : "bg-white text-gray-600 hover:border-indigo-300 hover:bg-gray-50"
+                      ${
+                        active === index
+                          ? "bg-[#635BFF] text-white shadow-md"
+                          : "bg-white text-gray-600 hover:border-indigo-300 hover:bg-gray-50"
                       }`}
                   >
                     {tab.title}

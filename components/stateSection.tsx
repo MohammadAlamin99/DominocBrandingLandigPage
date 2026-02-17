@@ -100,7 +100,7 @@ export default function StatsSection() {
         <div
           data-aos="fade-up"
           data-aos-delay="100"
-          className="w-full lg:w-1/4 text-center lg:text-left"
+          className="w-full lg:w-1/3 text-center lg:text-left"
         >
           <h2 className="text-3xl sm:text-4xl md:text-[44px] font-bold text-[#29343D] leading-tight">
             A unique story in <br className="hidden sm:block" />

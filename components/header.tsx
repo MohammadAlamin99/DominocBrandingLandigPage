@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import LogoIcon from "./svg/LogoIcon";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,17 +20,21 @@ export default function Header() {
     <header className="absolute top-0 left-0 z-50 w-full bg-transparent pt-3">
       <div className="flex h-20 max-w-7xl mx-auto items-center justify-between px-4 md:px-8 lg:px-12">
         {/* Logo Section */}
-        <Link href="/" className="flex items-center gap-2">
-          <div className="relative w-28 h-8">
+        <Link href="/" className="flex items-center">
+          <div className="relative w-8 h-8 md:w-10 md:h-10">
             {/* OPTION FOR LOGO IMAGE */}
-            <Image
-              src="/images/BrandLogo.png"
+            {/* <Image
+              src="/images/logo.png"
               alt="Logo"
               fill
               className="object-contain "
               priority
-            />
+            /> */}
+            <LogoIcon />
           </div>
+          <span className="text-[18px] font-manrope font-bold text-[#635BFF] pb-1">
+            Your logo
+          </span>
         </Link>
 
         {/* Desktop Navigation */}
@@ -54,7 +59,7 @@ export default function Header() {
             Get Started
           </button>
           <button
-            className="px-4 font-manrope font-medium py-2.5 rounded-[8px] border-2 border-[#635BFF] 
+            className="px-4 font-manrope font-medium py-2 rounded-[8px] border-2 border-[#635BFF] 
           text-[#635BFF] text-sm  hover:bg-[#635BFF] hover:text-white transition-all duration-400 ease-in-out leading-6 cursor-pointer"
           >
             Login

@@ -1,5 +1,4 @@
 "use client";
-
 import Image from "next/image";
 import { useEffect } from "react";
 import AOS from "aos";
@@ -15,7 +14,7 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="relative w-full min-h-auto flex flex-col items-center pt-32 md:pt-40 lg:pt-40 overflow-hidden bg-[#F8F9FD]">
+    <section className="relative w-full min-h-auto flex flex-col items-center pt-32 md:pt-40 lg:pt-40 overflow-hidden bg-white">
       {/* Background image */}
       <div className="absolute inset-0 z-0 w-full h-[85%] lg:h-[90%]">
         <Image
@@ -39,12 +38,11 @@ export default function HeroSection() {
           </span>{" "}
           Your Salon Business
         </h1>
-
         {/* Subheadline */}
         <p
           data-aos="fade-up"
           data-aos-delay="150"
-          className="text-base font-manrope md:text-[16px] max-w-4xl mb-8 leading-relaxed text-[#526B7A] font-medium"
+          className="text-base font-manrope md:text-[16px] max-w-4xl mb-8 leading-relaxed text-[#526B7A] font-medium z-10"
         >
           One platform — booking, inventory, forms, budgeting & social media —
           built to simplify and scale
@@ -54,10 +52,10 @@ export default function HeroSection() {
         <div
           data-aos="fade-up"
           data-aos-delay="300"
-          className="flex flex-col items-center gap-2 mb-4"
+          className="flex flex-col items-center gap-2 z-10"
         >
           <button
-            className="px-4 py-2.5 font-manrope bg-[#635BFF] text-white text-[14px] rounded-[8px]
+            className="px-4 py-2.5 font-manrope bg-[#635BFF] text-white text-[14px] rounded-[8px] 
             hover:bg-[#4B4ECA] transition-all duration-300 hover:-translate-y-0.5 active:scale-95 cursor-pointer"
           >
             Start Your Free Trial
@@ -72,19 +70,24 @@ export default function HeroSection() {
         <div
           data-aos="fade-up"
           data-aos-delay="450"
-          className="relative w-full max-w-5xl px-2 md:px-0 mt-8"
+          className="relative w-full max-w-5xl px-2 md:px-0 mt-10"
         >
-          {/* Glow */}
-          <div className="absolute -inset-10 bg-[#5F63F2]/10 blur-[100px] rounded-full opacity-40 pointer-events-none" />
-
           {/* Image */}
-          <div className="relative overflow-hidden">
+          <div className="relative">
             <Image
-              src="/images/Dashboard.png"
+              src="/images/dashboard.png"
               alt="Salon Management Dashboard"
               width={1200}
               height={750}
               className="w-full h-auto block"
+              priority
+            />
+            <Image
+              src="/images/effectDashboard.png"
+              alt="Salon Management Dashboard"
+              width={1200}
+              height={750}
+              className="w-full h-auto absolute left-1/2 top-[40%] -translate-x-1/2 -translate-y-1/2 transform scale-140 -z-10"
               priority
             />
           </div>
