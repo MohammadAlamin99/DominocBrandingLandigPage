@@ -27,7 +27,7 @@ const tabs: Tab[] = [
   {
     id: 0,
     title: "Advanced Dashboard",
-    image: "/images/firstimage.png",
+    image: "/images/image01.svg",
     subtitle: "Advanced insights at your fingertips",
     description:
       "Instant overview of sales, appointments, clients, and staff activity — all in one place.",
@@ -44,7 +44,7 @@ const tabs: Tab[] = [
   {
     id: 1,
     title: "Appointment Manager",
-    image: "/images/Image__2.png",
+    image: "/images/image02.svg",
     subtitle: "All your appointments, organized in one place",
     description:
       "Manage appointments easily and keep clients informed with smart automation.",
@@ -59,7 +59,7 @@ const tabs: Tab[] = [
   {
     id: 2,
     title: "Client Management",
-    image: "/images/Image__3.png",
+    image: "/images/image03.svg",
     subtitle: "Know every client. Personalize every experience.",
     description:
       "A powerful customer profile system that helps you track every detail and build loyalty.",
@@ -77,7 +77,7 @@ const tabs: Tab[] = [
   {
     id: 3,
     title: "Team Management",
-    image: "/images/Image__4.png",
+    image: "/images/image04.svg",
     subtitle: "Empower your team with smart staff management",
     description:
       "Organize schedules, monitor productivity, and control staff performance from one dashboard.",
@@ -94,7 +94,7 @@ const tabs: Tab[] = [
   {
     id: 4,
     title: "Services Management",
-    image: "/images/Image__5.png",
+    image: "/images/image05.svg",
     subtitle: "Manage every service with total precision",
     description:
       "Control services, categories, pricing, VAT and duration settings — all in one place.",
@@ -109,7 +109,7 @@ const tabs: Tab[] = [
   {
     id: 5,
     title: "Inventory",
-    image: "/images/Image__6.png",
+    image: "/images/image06.svg",
     subtitle: "Stay stocked, stay profitable",
     description:
       "Track stock in real time, avoid shortages, and reduce waste with smart inventory control.",
@@ -122,7 +122,7 @@ const tabs: Tab[] = [
   {
     id: 6,
     title: "Financial Reporting",
-    image: "/images/Image__7.png",
+    image: "/images/image07.svg",
     subtitle: "Smart financial tools to keep every transaction under control",
     description:
       "Access full payment details, generate receipts, and keep financial records organized and unified.",
@@ -137,7 +137,7 @@ const tabs: Tab[] = [
   {
     id: 7,
     title: "Budgeting Management",
-    image: "/images/Image__8.png",
+    image: "/images/image08.svg",
     subtitle:
       "Take full control of your budget — Clear insights, smarter decisions",
     description:
@@ -155,7 +155,7 @@ const tabs: Tab[] = [
   {
     id: 8,
     title: "Checkout & Receipts",
-    image: "/images/Image__9.png",
+    image: "/images/image10.svg",
     subtitle: "A faster, frictionless way to get paid",
     description:
       "Create receipts instantly, add services/products quickly, and sync payments with reports.",
@@ -168,7 +168,7 @@ const tabs: Tab[] = [
   {
     id: 9,
     title: "Social Media",
-    image: "/images/Image__10.png",
+    image: "/images/image09.svg",
     subtitle: "Boost your salon’s online presence",
     description:
       "Plan posts, track analytics, and manage content assets in one platform.",
@@ -181,7 +181,7 @@ const tabs: Tab[] = [
   {
     id: 10,
     title: "Waivers & Files",
-    image: "/images/Image__11.png",
+    image: "/images/image11.svg",
     subtitle: "Paperwork done — securely, digitally, instantly.",
     description:
       "Collect signatures, store files safely, and access everything anytime.",
@@ -194,7 +194,7 @@ const tabs: Tab[] = [
   {
     id: 11,
     title: "Roles Management",
-    image: "/images/Image__12.png",
+    image: "/images/image12.svg",
     subtitle: "Manage access with confidence",
     description:
       "Control staff permissions with precision and keep your salon data protected.",
@@ -229,7 +229,6 @@ export default function SalonManagementSection() {
     else swiperRef.current.slideNext();
   };
 
-  // ✅ Updated: swiper slideTo remove করা হয়েছে
   const handleTabClick = (index: number) => {
     setActive(index);
   };
@@ -255,12 +254,12 @@ export default function SalonManagementSection() {
         <div
           data-aos="fade-up"
           data-aos-delay="150"
-          className="relative mt-12 flex items-center group"
+          className="relative mt-12 px-0 sm:px-12 lg:px-0 flex items-center group"
         >
           {/* Left Arrow */}
           <button
             onClick={() => scroll("left")}
-            className="hidden md:flex items-center justify-center w-10 h-10 rounded-full bg-[#EEF3F9] border border-gray-200 z-20 cursor-pointer absolute left-6 top-1/2 -translate-y-1/2 shadow-md"
+            className="hidden md:flex items-center justify-center w-10 h-10 rounded-full bg-[#EEF3F9] border border-gray-200 z-20 cursor-pointer absolute left-0 top-1/2 -translate-y-1/2 shadow-md"
             aria-label="Scroll Left"
           >
             <ChevronLeft size={30} color="#635BFF" />
@@ -273,10 +272,14 @@ export default function SalonManagementSection() {
               spaceBetween={16}
               slidesPerView={5}
               breakpoints={{
-                0: { slidesPerView: 1.4 },
+                0: { slidesPerView: 2 },
+                400: { slidesPerView: 2 },
                 480: { slidesPerView: 2 },
+                640: { slidesPerView: 2 },
                 768: { slidesPerView: 3 },
-                1024: { slidesPerView: 5 },
+                900: { slidesPerView: 3 },
+                1024: { slidesPerView: 4 },
+                1260: { slidesPerView: 5 },
               }}
               className="py-2"
             >
@@ -302,26 +305,25 @@ export default function SalonManagementSection() {
           {/* Right Arrow */}
           <button
             onClick={() => scroll("right")}
-            className="hidden md:flex items-center justify-center w-10 h-10 rounded-full bg-[#EEF3F9] border border-gray-200 z-20 cursor-pointer absolute right-6 top-1/2 -translate-y-1/2 shadow-md"
+            className="hidden md:flex items-center justify-center w-10 h-10 rounded-full bg-[#EEF3F9] border border-gray-200 z-20 cursor-pointer absolute right-0 top-1/2 -translate-y-1/2 shadow-md"
             aria-label="Scroll Right"
           >
             <ChevronRight size={30} color="#635BFF" />
           </button>
         </div>
-
         {/* Main Content */}
-        <div className="mt-16 grid grid-cols-1 lg:grid-cols-2 gap-16 align-center">
+        <div className="mt-16 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Image Preview */}
           <div
             key={activeTab.image}
             data-aos="fade-up"
-            className="relative w-full h-[300px] md:h-full rounded-2xl"
+            className="relative w-full h-[320px] md:h-[420px] lg:h-[700px] lg:transform scale-110 rounded-2xl flex items-center justify-center"
           >
             <Image
               src={activeTab.image}
               alt={activeTab.title}
               fill
-              className="object-contain transform scale-110"
+              className="object-contain"
               priority
             />
           </div>

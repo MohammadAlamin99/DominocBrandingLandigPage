@@ -18,7 +18,7 @@ export default function HeroSection() {
       {/* Background image */}
       <div className="absolute inset-0 z-0 w-full h-[85%] lg:h-[90%]">
         <Image
-          src="/images/hero-bg.png"
+          src="/images/homebanner.svg"
           alt="Background Decoration"
           fill
           priority
@@ -75,7 +75,7 @@ export default function HeroSection() {
           {/* Image */}
           <div className="relative">
             <Image
-              src="/images/banner-dashboard.png"
+              src="/images/dashboard.svg"
               alt="Salon Management Dashboard"
               width={1200}
               height={750}
